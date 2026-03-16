@@ -1,12 +1,16 @@
 return {
-	"folke/tokyonight.nvim",
+	"uloco/bluloco.nvim",
 	lazy = false,
 	priority = 1000,
+	dependencies = { "rktjmp/lush.nvim" },
 	config = function()
-		require("tokyonight").setup({
-			style = "storm", -- или "moon" / "night"
-			transparent = false, -- установи true, если хочешь прозрачный фон терминала
+		-- your optional config goes here, see below.
+		require("bluloco").setup({
+			style = "dark",
+			transparent = false,
+			rainbow_headings = false,
 		})
-		vim.cmd([[colorscheme tokyonight]])
+
+		vim.cmd("colorscheme bluloco")
 	end,
 }
