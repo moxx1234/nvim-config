@@ -18,7 +18,16 @@ return {
 			function()
 				require("telescope.builtin").live_grep({
 					additional_args = function(_)
-						return { "--hidden", "--glob", "!.git/*" }
+						return {
+							"--hidden",
+							"--glob", "!.git/*",
+							"--glob", "!node_modules/*",
+							"--glob", "!__pycache__/*",
+							"--glob", "!.venv/*",
+							"--glob", "!venv/*",
+							"--glob", "!env/*",
+							"--glob", "!.next/*",
+						}
 					end,
 				})
 			end,
@@ -36,7 +45,7 @@ return {
 					["<C-k>"] = require("telescope.actions").move_selection_previous,
 				}
 			},
-			file_ignore_patterns = { "%.git/", "node_modules/", "%.next/" },
+			file_ignore_patterns = { "%.git/", "node_modules/", "__pycache__/", "%.venv/", "venv/", "env/", "%.next/" },
 			preview = {
 				treesitter = false
 			}
