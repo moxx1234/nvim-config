@@ -45,7 +45,7 @@ return {
 					["<C-k>"] = require("telescope.actions").move_selection_previous,
 				}
 			},
-			file_ignore_patterns = { "%.git/", "node_modules/", "__pycache__/", "%.venv/", "venv/", "env/", "%.next/" },
+			file_ignore_patterns = { "%.git[\\/]", "node_modules[\\/]", "__pycache__[\\/]", "%.venv[\\/]", "venv[\\/]", "env[\\/]", "%.next[\\/]" },
 			preview = {
 				treesitter = false
 			}
