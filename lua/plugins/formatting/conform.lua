@@ -58,6 +58,8 @@ return {
 				typescriptreact = js_formatters,
 				lua = { "stylua" },
 				python = { "black" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 			},
 		}
 	end,

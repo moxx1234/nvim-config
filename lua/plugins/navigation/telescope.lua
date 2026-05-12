@@ -33,9 +33,10 @@ return {
 			end,
 			desc = "Live Grep (all)",
 		},
-		{ "<leader>fb", "<cmd>Telescope buffers<cr>",        desc = "Buffers" },
-		{ "<leader>fh", "<cmd>Telescope help_tags<cr>",      desc = "Help Tags" },
-		{ "<leader>fr", "<cmd>Telescope lsp_references<cr>", desc = "references" },
+		{ "<leader>fb", "<cmd>Telescope buffers<cr>",              desc = "Buffers" },
+		{ "<leader>fh", "<cmd>Telescope help_tags<cr>",            desc = "Help Tags" },
+		{ "<leader>fr", "<cmd>Telescope lsp_references<cr>",       desc = "references" },
+		{ "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Find symbols in document" },
 	},
 	opts = {
 		defaults = {

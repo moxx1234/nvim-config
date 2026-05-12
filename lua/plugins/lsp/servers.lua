@@ -79,6 +79,21 @@ return {
 				},
 			},
 			yamlls = {},
+			clangd = {
+				-- Чтобы clangd не ругался на кодировки (стандартная проблема в связке с некоторыми клиентами)
+				capabilities = {
+					offsetEncoding = { "utf-16" },
+				},
+				cmd = {
+					"clangd",
+					"--background-index", -- Индексация в фоне
+					"--clang-tidy", -- Включает линтер (очень полезно для обучения)
+					"--header-insertion=iwyu", -- Помогает с инклудами (Include What You Use)
+					"--completion-style=detailed",
+					"--function-arg-placeholders",
+					"--fallback-style=llvm", -- Стиль форматирования по умолчанию, если нет .clang-format
+				},
+			},
 		}
 
 		local on_attach = function(_, bufnr)
